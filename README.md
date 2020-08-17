@@ -27,3 +27,5 @@ Room: 1 Room
 ### The Output
 Tests that can validate certain Hotel are listed when filter options are applied. 
 
+### Final Note
+The project is set-up to run on the Chrome Browser - this is configurable by editing the run settings file in a Notepad or other text editor. 3 browsers are officially supported - chrome, firefox and edge IE is coded but not support and will return a not implemented exception.
