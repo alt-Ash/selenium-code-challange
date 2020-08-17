@@ -14,7 +14,7 @@ namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Factories
             webDriverBuilder = browserType switch
             {
                 BrowserType.Chrome => new ChromeDriverBuilder(),
-                BrowserType.Firefox => new EdgeDriverBuilder(),
+                BrowserType.Firefox => new FirefoxDriverBuilder(),
                 BrowserType.Edge => new EdgeDriverBuilder(),
                 BrowserType.IE => throw new NotImplementedException($"{browserType} Browser has not been implemented"),
                 _ => throw new ArgumentException($"Browser Not Supported: {browserType}"),

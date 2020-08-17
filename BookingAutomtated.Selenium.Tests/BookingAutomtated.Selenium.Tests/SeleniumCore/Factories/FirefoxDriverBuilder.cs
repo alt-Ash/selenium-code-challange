@@ -14,12 +14,10 @@ namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Factories
         {
             {
                 var firefoxOptions = new FirefoxOptions();
-                firefoxOptions.AddArguments(new string[] { "--test-type" });
-                firefoxOptions.AddArgument("--ignore-certificate-errors");
-                firefoxOptions.AddArgument("--allow-running-insecure-content");
-                firefoxOptions.AddArgument("--start-maximized");
+                firefoxOptions.AddArgument("--window-size");
+                firefoxOptions.AddArgument("1920,1080");
+                firefoxOptions.AddArgument("start-maximized");
 
-               
                 return firefoxOptions;
             }
         }
