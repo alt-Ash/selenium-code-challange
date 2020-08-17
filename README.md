@@ -7,7 +7,7 @@ Write a set of Selenium tests for these new filters options, including a framewo
 
 ### Instructions to make it the tests run 
 1. Clones repository from GitHub
-2. Report all NuGet packages for the solution -> necessary to ensure that the web drivers are installed
+2. Restore all NuGet packages for the solution -> necessary to ensure that the web drivers are installed
 3. Set the test .runsettings file:
     1. From the top section of the VS IDE select "Test" -> the test section of VS will drop down
     2. From the list of options select "Configure Run Settings" -> a sidebar should open.
