@@ -14,8 +14,8 @@ namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Extensions
 {
     public class Selenium
     {
-        protected IWebDriver WebDriver { get; }
-        protected TimeSpan Timeout { get; private set; }
+        private IWebDriver WebDriver { get; }
+        private TimeSpan Timeout { get; }
 
         public Selenium()
         {
@@ -43,6 +43,7 @@ namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Extensions
         {
             var elements = WebDriver.FindElements(locator);
             var list = elements.Select(x => new DriverToolBox(this, locator));
+
             return new List<IPage>(list);
         }
 
@@ -79,7 +80,6 @@ namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Extensions
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.InvisibilityOfElementLocated(locator));
         }
 
-
         private bool ElementIsVisible(By locator)
         {
             try
@@ -102,14 +102,7 @@ namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Extensions
 
             var internalElement = element.FindElements(By.TagName(innerElement));
 
-            var innerElements = new List<IWebElement>();
-
-            foreach (IWebElement data in internalElement)
-            {
-                innerElements.Add(data);
-            }
-
-            return innerElements;
+            return internalElement.ToList();
         }
 
         private void ClickElementInTable(string innerElement, string attribute, string elementStart, string elementEnd, By locator)

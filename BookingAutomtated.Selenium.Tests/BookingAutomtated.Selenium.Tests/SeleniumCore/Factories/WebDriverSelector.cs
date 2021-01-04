@@ -7,11 +7,11 @@ namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Factories
 {
     public class WebDriverSelector : IWebDriverSelector
     {
-        private WebDriverBuilder webDriverBuilder;
+        private WebDriverBuilder _webDriverBuilder;
 
         public IWebDriver GetDriver(BrowserType browserType)
         {
-            webDriverBuilder = browserType switch
+            _webDriverBuilder = browserType switch
             {
                 BrowserType.Chrome => new ChromeDriverBuilder(),
                 BrowserType.Firefox => new FirefoxDriverBuilder(),
@@ -19,9 +19,9 @@ namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Factories
                 BrowserType.IE => throw new NotImplementedException($"{browserType} Browser has not been implemented"),
                 _ => throw new ArgumentException($"Browser Not Supported: {browserType}"),
             };
-            webDriverBuilder.BuildDriver();
+            _webDriverBuilder.BuildDriver();
 
-            return webDriverBuilder.GetDriver();
+            return _webDriverBuilder.GetDriver();
         }
     }
 }

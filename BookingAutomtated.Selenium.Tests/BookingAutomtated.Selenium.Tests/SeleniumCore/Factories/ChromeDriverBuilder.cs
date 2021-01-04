@@ -13,6 +13,7 @@ namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Factories
         protected sealed override DriverOptions GetOptions()
         {
             var chromeOptions = new ChromeOptions();
+
             chromeOptions.AddArguments(new string[] { "--test-type" });
             chromeOptions.AddArguments(new string[] { "--lang=" });
             chromeOptions.AddUserProfilePreference("disable-popup-blocking", "true");
@@ -20,6 +21,7 @@ namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Factories
             chromeOptions.AddArgument("--allow-running-insecure-content");
             chromeOptions.AddArgument("--incognito");
             chromeOptions.AddArgument("--start-maximized");
+            //chromeOptions.AddArgument("--headless");
 
             return chromeOptions;
         }

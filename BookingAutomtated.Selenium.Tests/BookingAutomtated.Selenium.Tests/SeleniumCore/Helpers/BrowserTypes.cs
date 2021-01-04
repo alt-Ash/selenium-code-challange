@@ -5,6 +5,6 @@
         Chrome,
         IE,
         Edge,
-        Firefox
+        Firefox,
     }
 }

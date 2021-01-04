@@ -8,9 +8,9 @@ namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Helpers
     {
         bool IsVisible { get; }
         string Text { get; }
-        void WaitForVisableElement();
+        void WaitForVisibleElement();
         void WaitForVisibleCollection();
-        void WaitUntilVisableElementIsNot();
+        void WaitUntilVisibleElementIsNot();
         void Click();
         string GetAttribute(string attribute);
         void SendKeys(string attribute);

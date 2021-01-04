@@ -6,30 +6,30 @@ namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Base
 {
     public abstract class Base
     {
-        private readonly Dictionary<string, IPage> PageElements = new Dictionary<string, IPage>();
+        private readonly Dictionary<string, IPage> _pageElements = new Dictionary<string, IPage>();
 
-        private readonly Dictionary<string, List<IPage>> PageElementLists = new Dictionary<string, List<IPage>>();
+        private readonly Dictionary<string, List<IPage>> _pageElementLists = new Dictionary<string, List<IPage>>();
 
-        public IPage FindById(string locator)
+        protected IPage FindById(string locator)
         {
             return FindElementBy(FindBy.Id, locator);
         }
 
-        public IPage FindByCss(string locator)
+        protected IPage FindByCss(string locator)
         {
             return FindElementBy(FindBy.Css, locator);
         }
 
-        public IPage FindByName(string locator)
+        protected IPage FindByName(string locator)
         {
             return FindElementBy(FindBy.Name, locator);
         }
 
-        public IPage FindByClassName(string locator)
+        protected IPage FindByClassName(string locator)
         {
             return FindElementBy(FindBy.ClassName, locator);
         }
-        public IPage FindByTagName(string locator)
+        protected IPage FindByTagName(string locator)
         {
             return FindElementBy(FindBy.TagName, locator);
         }
@@ -54,7 +54,7 @@ namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Base
             return FindElementsBy(FindBy.Id, locator);
         }
 
-        public List<IPage> FindElementsByClassName(string locator)
+        private protected IEnumerable<IPage> FindElementsByClassName(string locator)
         {
             return FindElementsBy(FindBy.ClassName, locator);
         }
@@ -68,12 +68,12 @@ namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Base
         {
             var key = $"{findBy}-{locator}";
 
-            if (PageElements.ContainsKey(key))
-                return PageElements[key];
+            if (_pageElements.ContainsKey(key))
+                return _pageElements[key];
 
             var element = GetElement(findBy, locator);
 
-            PageElements[key] = element;
+            _pageElements[key] = element;
 
             return element;
         }
@@ -82,23 +82,23 @@ namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Base
         {
             var key = $"{findBy}-{locator}";
 
-            if (PageElementLists.ContainsKey(key))
-                return PageElementLists[key];
+            if (_pageElementLists.ContainsKey(key))
+                return _pageElementLists[key];
 
             var elements = FindElements(findBy, locator);
 
-            PageElementLists[key] = elements;
+            _pageElementLists[key] = elements;
 
             return elements;
         }
 
-        private IPage GetElement(FindBy findBy, string locator)
+        private static IPage GetElement(FindBy findBy, string locator)
         {
             var selenium = new Extensions.Selenium();
             return selenium.FindElement(findBy, locator);
         }
 
-        private List<IPage> FindElements(FindBy findBy, string locator)
+        private static List<IPage> FindElements(FindBy findBy, string locator)
         {
             var selenium = new Extensions.Selenium();
             return selenium.FindElements(findBy, locator);

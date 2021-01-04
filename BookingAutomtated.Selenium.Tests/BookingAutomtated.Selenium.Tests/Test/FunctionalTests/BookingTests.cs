@@ -26,9 +26,9 @@ namespace BookingAutomtated.Selenium.Tests.Test.FunctionalTests
         {
             var page = new Booking();
 
-            page.BookingSerachBoxGetSearchText();
+            page.BookingSearchBoxGetSearchText();
 
-            Assert.IsTrue(page.BookingSerachBoxGetSearchText().Contains("Where are you going?"));
+            Assert.IsTrue(page.BookingSearchBoxGetSearchText().Contains("Where are you going?"));
         }
 
         [Test]
@@ -36,9 +36,9 @@ namespace BookingAutomtated.Selenium.Tests.Test.FunctionalTests
         {
             var page = new Booking();
 
-            page.BookingSerachBoxSendSearchTerm("Test Text");
+            page.BookingSearchBoxSendSearchTerm("Test Text");
 
-            Assert.AreNotEqual(page.BookingSerachBoxGetSearchText(), "Test Text");
+            Assert.AreNotEqual(page.BookingSearchBoxGetSearchText(), "Test Text");
         }
 
         [Test]
@@ -66,7 +66,7 @@ namespace BookingAutomtated.Selenium.Tests.Test.FunctionalTests
         {
             var page = new Booking();
 
-            page.BookingSerachBoxSendSearchTerm("Madrird");
+            page.BookingSearchBoxSendSearchTerm("Madrid");
             page.BookingSetVacationDate("August 2020", 0, 1);
             page.BookingSearchButton.Click();
 
@@ -78,10 +78,8 @@ namespace BookingAutomtated.Selenium.Tests.Test.FunctionalTests
         {
             var page = new Booking();
 
-            page.BookingSerachBoxSendSearchTerm("Limerick");
+            page.BookingSearchBoxSendSearchTerm("Limerick");
             page.BookingSetVacationDate("November 2020", 3, 1);
-
-           
 
             page.FilterByPopularActivities();
 
@@ -93,13 +91,13 @@ namespace BookingAutomtated.Selenium.Tests.Test.FunctionalTests
         {
             var page = new Booking();
 
-            page.BookingSerachBoxSendSearchTerm("Limerick");
+            page.BookingSearchBoxSendSearchTerm("Limerick");
             page.BookingSetVacationDate("November 2020", 3, 1);
 
             page.BookingSearchButton.Click();
 
-            if (page.BookingManageCookiesWindow.IsVisible) page.BookingManageCookiesAcceptButon.Click();
-            page.BookingManageCookiesAcceptButon.WaitUntilVisableElementIsNot();
+            if (page.BookingManageCookiesWindow.IsVisible) page.BookingManageCookiesAcceptButton.Click();
+            page.BookingManageCookiesAcceptButton.WaitUntilVisibleElementIsNot();
 
             page.FilterByPopularStars("5 stars");
 

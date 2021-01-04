@@ -21,7 +21,7 @@ namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Extensions
             Locator = locator;
         }
 
-        public void WaitForVisableElement()
+        public void WaitForVisibleElement()
         {
             Selenium.WaitUntilElementIsVisible(Locator);
         }
@@ -31,7 +31,7 @@ namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Extensions
             Selenium.WaitUntilCollectionIsVisible(Locator);
         }
 
-        public void WaitUntilVisableElementIsNot()
+        public void WaitUntilVisibleElementIsNot()
         {
             Selenium.WaitUntilElementIsNotVisible(Locator);
         }
