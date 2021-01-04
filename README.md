@@ -1,5 +1,5 @@
 ## selenium-code-challange
-*A solution that automated tests on the Boking.com Website*
+*A solution that automated tests on the Booking.com Website*
 
 ## Challenge: Automate Tests for Booking.com Filters 
 
