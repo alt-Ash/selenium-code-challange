@@ -332,3 +332,4 @@ ASALocalRun/
 #Ignore feature auto-generated code
 *.feature.cs
 
+.DS_Store

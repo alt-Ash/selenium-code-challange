@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Factories
+namespace BookingAutomated.Selenium.Tests.SeleniumCore.Factories
 {
     public abstract class WebDriverBuilder
     {

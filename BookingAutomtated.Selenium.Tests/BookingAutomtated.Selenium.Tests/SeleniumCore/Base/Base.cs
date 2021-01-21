@@ -1,8 +1,8 @@
-﻿using BookingAutomtated.Selenium.Tests.SeleniumCore.Helpers;
+﻿using System.Collections.Generic;
+using BookingAutomated.Selenium.Tests.SeleniumCore.Helpers;
+using BookingAutomated.Selenium.Tests.SeleniumCore.Interfaces;
 
-using System.Collections.Generic;
-
-namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Base
+namespace BookingAutomated.Selenium.Tests.SeleniumCore.Base
 {
     public abstract class Base
     {
@@ -29,6 +29,7 @@ namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Base
         {
             return FindElementBy(FindBy.ClassName, locator);
         }
+
         protected IPage FindByTagName(string locator)
         {
             return FindElementBy(FindBy.TagName, locator);

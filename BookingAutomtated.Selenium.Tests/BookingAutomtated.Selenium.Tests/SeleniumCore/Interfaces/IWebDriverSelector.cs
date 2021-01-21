@@ -1,8 +1,7 @@
-﻿using BookingAutomtated.Selenium.Tests.SeleniumCore.Helpers;
-
+﻿using BookingAutomated.Selenium.Tests.SeleniumCore.Helpers;
 using OpenQA.Selenium;
 
-namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Interfeaces
+namespace BookingAutomated.Selenium.Tests.SeleniumCore.Interfaces
 {
     public interface IWebDriverSelector
     {

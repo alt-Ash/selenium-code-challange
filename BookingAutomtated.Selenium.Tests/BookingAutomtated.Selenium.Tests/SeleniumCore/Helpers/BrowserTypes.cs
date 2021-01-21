@@ -1,4 +1,4 @@
-﻿namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Helpers
+﻿namespace BookingAutomated.Selenium.Tests.SeleniumCore.Helpers
 {
     public enum BrowserType
     {
@@ -6,5 +6,6 @@
         IE,
         Edge,
         Firefox,
+        Safire
     }
 }

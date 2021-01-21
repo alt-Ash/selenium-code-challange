@@ -1,13 +1,11 @@
-﻿using BookingAutomtated.Selenium.Tests.PageObject;
-using BookingAutomtated.Selenium.Tests.SeleniumCore.Base;
-
+﻿using System;
+using BookingAutomated.Selenium.Tests.PageObject;
+using BookingAutomated.Selenium.Tests.SeleniumCore.Base;
 using NUnit.Framework;
 
-using System;
-
-namespace BookingAutomtated.Selenium.Tests.Test.FunctionalTests
+namespace BookingAutomated.Selenium.Tests.Test.FunctionalTests
 {
-    public class BookingTests : InitializeTest
+    public class Tests : InitializeTest
     {
         [TearDown]
         public void TestTearDown()
@@ -67,7 +65,7 @@ namespace BookingAutomtated.Selenium.Tests.Test.FunctionalTests
             var page = new Booking();
 
             page.BookingSearchBoxSendSearchTerm("Madrid");
-            page.BookingSetVacationDate("August 2020", 0, 1);
+            page.BookingSetVacationDate("January 2021", 0, 1);
             page.BookingSearchButton.Click();
 
             Assert.IsTrue(page.BookingSearchResults.IsVisible);
@@ -79,7 +77,7 @@ namespace BookingAutomtated.Selenium.Tests.Test.FunctionalTests
             var page = new Booking();
 
             page.BookingSearchBoxSendSearchTerm("Limerick");
-            page.BookingSetVacationDate("November 2020", 3, 1);
+            page.BookingSetVacationDate("January 2021", 3, 1);
 
             page.FilterByPopularActivities();
 
@@ -92,7 +90,7 @@ namespace BookingAutomtated.Selenium.Tests.Test.FunctionalTests
             var page = new Booking();
 
             page.BookingSearchBoxSendSearchTerm("Limerick");
-            page.BookingSetVacationDate("November 2020", 3, 1);
+            page.BookingSetVacationDate("January 2021", 3, 1);
 
             page.BookingSearchButton.Click();
 

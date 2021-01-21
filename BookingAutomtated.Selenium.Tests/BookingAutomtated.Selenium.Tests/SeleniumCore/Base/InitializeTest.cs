@@ -1,13 +1,9 @@
-﻿using BookingAutomtated.Selenium.Tests.SeleniumCore.Factories;
-using BookingAutomtated.Selenium.Tests.SeleniumCore.Helpers;
-
+﻿using BookingAutomated.Selenium.Tests.SeleniumCore.Factories;
+using BookingAutomated.Selenium.Tests.SeleniumCore.Helpers;
 using NUnit.Framework;
-
 using OpenQA.Selenium;
 
-using System;
-
-namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Base
+namespace BookingAutomated.Selenium.Tests.SeleniumCore.Base
 {
     public class InitializeTest
     {
@@ -16,11 +12,11 @@ namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Base
         [SetUp]
         public static void AssemblyInitialize()
         {
-            var webDriver = (BrowserType)Enum.Parse(typeof(BrowserType), TestContext.Parameters["WebDriver"]);
+            var webDriver = BrowserType.Chrome; //(BrowserType)Enum.Parse(typeof(BrowserType), TestContext.Parameters["WebDriver"]);
 
             WebDriver = new WebDriverSelector().GetDriver(webDriver);
 
-            WebDriver.Url = TestContext.Parameters["WebSite"];
+            WebDriver.Url = "https://www.booking.com/"; //TestContext.Parameters["WebSite"];
         }
     }
 }

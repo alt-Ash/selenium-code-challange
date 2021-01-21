@@ -3,7 +3,7 @@ using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Remote;
 
-namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Factories
+namespace BookingAutomated.Selenium.Tests.SeleniumCore.Factories
 {
     internal class EdgeDriverBuilder : WebDriverBuilder
     {

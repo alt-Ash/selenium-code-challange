@@ -1,9 +1,9 @@
-﻿using BookingAutomtated.Selenium.Tests.SeleniumCore.Helpers;
-using BookingAutomtated.Selenium.Tests.SeleniumCore.Interfeaces;
+﻿using System;
+using BookingAutomated.Selenium.Tests.SeleniumCore.Helpers;
+using BookingAutomated.Selenium.Tests.SeleniumCore.Interfaces;
 using OpenQA.Selenium;
-using System;
 
-namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Factories
+namespace BookingAutomated.Selenium.Tests.SeleniumCore.Factories
 {
     public class WebDriverSelector : IWebDriverSelector
     {

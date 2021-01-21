@@ -1,21 +1,18 @@
-﻿using BookingAutomtated.Selenium.Tests.SeleniumCore.Helpers;
-using BookingAutomtated.Selenium.Tests.SeleniumCore.Interfeaces;
-
+﻿using System.Collections.Generic;
+using BookingAutomated.Selenium.Tests.SeleniumCore.Interfaces;
 using OpenQA.Selenium;
 
-using System.Collections.Generic;
-
-namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Extensions
+namespace BookingAutomated.Selenium.Tests.SeleniumCore.Helpers
 {
     public class DriverToolBox : IPage
     {
-        public Selenium Selenium;
+        public Extensions.Selenium Selenium;
         public By Locator;
 
         public bool IsVisible => Selenium.IsElementVisible(Locator);
         public string Text => Selenium.GetText(Locator);
 
-        public DriverToolBox(Selenium selenium, By locator)
+        public DriverToolBox(Extensions.Selenium selenium, By locator)
         {
             Selenium = selenium;
             Locator = locator;

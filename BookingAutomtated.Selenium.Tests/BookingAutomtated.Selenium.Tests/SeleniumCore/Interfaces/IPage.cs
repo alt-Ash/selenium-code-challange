@@ -1,8 +1,7 @@
-﻿using OpenQA.Selenium;
+﻿using System.Collections.Generic;
+using OpenQA.Selenium;
 
-using System.Collections.Generic;
-
-namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Helpers
+namespace BookingAutomated.Selenium.Tests.SeleniumCore.Interfaces
 {
     public interface IPage
     {

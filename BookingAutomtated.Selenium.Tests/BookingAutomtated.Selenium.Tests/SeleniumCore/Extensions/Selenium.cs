@@ -1,16 +1,14 @@
-﻿using BookingAutomtated.Selenium.Tests.SeleniumCore.Base;
-using BookingAutomtated.Selenium.Tests.SeleniumCore.Helpers;
-
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using BookingAutomated.Selenium.Tests.SeleniumCore.Base;
+using BookingAutomated.Selenium.Tests.SeleniumCore.Helpers;
+using BookingAutomated.Selenium.Tests.SeleniumCore.Interfaces;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-
-namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Extensions
+namespace BookingAutomated.Selenium.Tests.SeleniumCore.Extensions
 {
     public class Selenium
     {

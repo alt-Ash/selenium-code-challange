@@ -1,9 +1,7 @@
-﻿using BookingAutomtated.Selenium.Tests.SeleniumCore.Extensions;
+﻿using System;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
 
-namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Helpers
+namespace BookingAutomated.Selenium.Tests.SeleniumCore.Helpers
 {
     public class FindByAttribute
     {

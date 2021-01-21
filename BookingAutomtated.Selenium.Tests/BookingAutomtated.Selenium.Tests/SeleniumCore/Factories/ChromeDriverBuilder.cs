@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace BookingAutomtated.Selenium.Tests.SeleniumCore.Factories
+namespace BookingAutomated.Selenium.Tests.SeleniumCore.Factories
 {
     internal class ChromeDriverBuilder : WebDriverBuilder
     {

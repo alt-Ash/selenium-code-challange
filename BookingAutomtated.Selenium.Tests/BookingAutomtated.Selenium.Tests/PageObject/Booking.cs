@@ -1,11 +1,10 @@
-﻿using BookingAutomtated.Selenium.Tests.SeleniumCore.Base;
-using BookingAutomtated.Selenium.Tests.SeleniumCore.Helpers;
+﻿using System;
+using System.Collections.Generic;
+using BookingAutomated.Selenium.Tests.SeleniumCore.Base;
+using BookingAutomated.Selenium.Tests.SeleniumCore.Interfaces;
 using OpenQA.Selenium;
 
-using System;
-using System.Collections.Generic;
-
-namespace BookingAutomtated.Selenium.Tests.PageObject
+namespace BookingAutomated.Selenium.Tests.PageObject
 {
 	public class Booking : Base
 	{
